@@ -5,13 +5,6 @@ using System.Linq;
 
 public class ObjectPool : MonoBehaviour
 {
-    public enum ObjectPoolType
-    {
-        Single,
-        Dual,
-        Catapult 
-    }
-    public ObjectPoolType poolType;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private int poolSize = 10;
     [SerializeField] private List<GameObject> bulletList;
