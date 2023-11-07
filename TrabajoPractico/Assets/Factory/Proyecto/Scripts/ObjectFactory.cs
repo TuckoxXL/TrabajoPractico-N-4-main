@@ -17,12 +17,12 @@ public class ObjectFactory : MonoBehaviour
         }
     }
 
-    public Factory CreateStuff(string skillName, Transform playerTransform)
+    public Factory CreateStuff(string objName, Transform playerTransform)
     {
-        if (objectName.TryGetValue(skillName, out Factory skillPrefab))
+        if (objectName.TryGetValue(objName, out Factory Prefab))
         {
-            Factory skillInstance = Instantiate(skillPrefab, playerTransform.position, Quaternion.identity); 
-            return skillInstance;
+            Factory objectinstance = Instantiate(Prefab, playerTransform.position, Quaternion.identity); 
+            return objectinstance;
         }
         else 
         {
