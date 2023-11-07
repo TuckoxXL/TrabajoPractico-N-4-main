@@ -5,9 +5,18 @@ using System.Linq;
 
 public class ObjectPool : MonoBehaviour
 {
+    public enum objcetType
+    {
+        single,
+        dual,
+        catapult,
+    }
+
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private int poolSize = 10;
     [SerializeField] private List<GameObject> bulletList;
+    public objcetType objcetype = objcetType.single;
+
 
     private static ObjectPool instance;
     public static ObjectPool Instance { get { return instance; } }
@@ -26,11 +35,23 @@ public class ObjectPool : MonoBehaviour
     public void Start()
     {
         AddBulletToPool(poolSize);
+        listType();
     }
 
     private void AddBulletToPool(int amount)
     {
         for (int i = 0; i < amount; i++)
+        {
+            GameObject bullet = Instantiate(bulletPrefab);
+            bullet.SetActive(false);
+            bulletList.Add(bullet);
+            bullet.transform.parent = transform;
+        }
+    }
+
+    private void listType()
+    {
+        if(objcetype == objcetType.single)
         {
             GameObject bullet = Instantiate(bulletPrefab);
             bullet.SetActive(false);
