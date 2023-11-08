@@ -8,7 +8,9 @@ public class TurretAI : MonoBehaviour
         Dual = 2,
         Catapult = 3,
     }
-
+    //TE PIDO PERDON DE LA UNICA MANERA QUE SE (CUIDA TUS OJITOS) ATT: SEBA
+    //TE PIDO PERDON DE LA UNICA MANERA QUE SE (CUIDA TUS OJITOS) ATT: SEBA
+    //TE PIDO PERDON DE LA UNICA MANERA QUE SE (CUIDA TUS OJITOS) ATT: SEBA
     public GameObject currentTarget;
     public Transform turreyHead;
 
