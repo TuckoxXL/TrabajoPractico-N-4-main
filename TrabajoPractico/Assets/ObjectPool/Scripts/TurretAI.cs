@@ -22,6 +22,7 @@ public class TurretAI : MonoBehaviour {
 
     //public Quaternion randomRot;
     public Vector3 randomRot;
+    public Animator animator;
 
     [Header("[Turret Type]")]
     public TurretType turretType = TurretType.Single;
