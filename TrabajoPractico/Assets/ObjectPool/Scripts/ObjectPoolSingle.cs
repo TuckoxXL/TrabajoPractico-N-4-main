@@ -1,16 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Linq;
 
-public class ObjectPool : MonoBehaviour
+public class ObjectPoolSingle : MonoBehaviour
 {
+
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private int poolSize = 10;
     [SerializeField] private List<GameObject> bulletList;
 
-    private static ObjectPool instance;
-    public static ObjectPool Instance { get { return instance; } }
+    public static ObjectPoolSingle instance;
+    public static ObjectPoolSingle Instance { get { return instance; } }
 
     private void Awake()
     {
